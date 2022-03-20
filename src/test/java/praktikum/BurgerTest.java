@@ -71,7 +71,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void getReceipt() {
+    public void getReceiptOneIngredientAndTwoBunsReturnsReceiptOfTheBurgerTest() {
         Mockito.when(bun.getName()).thenReturn("Флюоресцентная булка R2-D3");
         Mockito.when(bun.getPrice()).thenReturn(100f);
         Mockito.when(ingredient.getPrice()).thenReturn(100f);
