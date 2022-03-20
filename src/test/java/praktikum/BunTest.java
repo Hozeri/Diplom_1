@@ -1,14 +1,21 @@
 package praktikum;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class BunTest {
 
+    Bun bun;
+
+    @Before
+    public void setUp() throws Exception {
+        bun = new Bun("Флюоресцентная булка R2-D3", 988.00f);
+    }
+
     @Test
     public void getNameStringNameReturnBunNameTest() {
-        Bun bun = new Bun("Флюоресцентная булка R2-D3", 988.00f);
         String actual = bun.getName();
         String expected = "Флюоресцентная булка R2-D3";
         assertEquals(expected, actual);
@@ -16,7 +23,6 @@ public class BunTest {
 
     @Test
     public void getPriceFloatPriceReturnBunPriceTest() {
-        Bun bun = new Bun("Флюоресцентная булка R2-D3", 988.00f);
         float actual = bun.getPrice();
         float expected = 988.00f;
         assertEquals(expected, actual, 0.0f);
