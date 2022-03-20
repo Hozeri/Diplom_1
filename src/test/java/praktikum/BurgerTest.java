@@ -25,13 +25,6 @@ public class BurgerTest {
     @Mock
     Ingredient ingredient, ingredient1, ingredient2;
 
-//    @Test
-//    public void setBunsBunCalledWithBunTypeArgumentTest() {
-//        burger.setBuns(bun);
-//        System.out.println(bun);
-//        assertEquals(null, bun);
-//    }
-
     @Test
     public void addIngredientOneIngredientIngredientIsAddedTest() {
         burger.addIngredient(ingredient);
