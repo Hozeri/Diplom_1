@@ -20,9 +20,9 @@ public class IngredientParameterizedTest {
 
     @Parameterized.Parameters
     public static Object[][] getIngredientTypeData() {
-        return new Object[][] {
-                { FILLING, new Ingredient(FILLING, "Говяжий метеорит (отбивная)", 3000f)},
-                { SAUCE, new Ingredient(SAUCE, "Соус фирменный Space Sauce", 80f)},
+        return new Object[][]{
+                {FILLING, new Ingredient(FILLING, "Говяжий метеорит (отбивная)", 3000f)},
+                {SAUCE, new Ingredient(SAUCE, "Соус фирменный Space Sauce", 80f)},
         };
     }
 
