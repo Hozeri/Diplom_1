@@ -18,7 +18,7 @@ public class IngredientParameterizedTest {
         this.ingredient = ingredient;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}")
     public static Object[][] getIngredientTypeData() {
         return new Object[][]{
                 {FILLING, new Ingredient(FILLING, "Говяжий метеорит (отбивная)", 3000f)},
