@@ -18,13 +18,13 @@ public class BunTest {
     public void getNameStringNameReturnBunNameTest() {
         String actual = bun.getName();
         String expected = "Флюоресцентная булка R2-D3";
-        assertEquals(expected, actual);
+        assertEquals("Имя булки не соответствует ожидаемой", expected, actual);
     }
 
     @Test
     public void getPriceFloatPriceReturnBunPriceTest() {
         float actual = bun.getPrice();
         float expected = 988.00f;
-        assertEquals(expected, actual, 0.0f);
+        assertEquals("Цена булки не соответствует ожидаемой", expected, actual, 0.0f);
     }
 }

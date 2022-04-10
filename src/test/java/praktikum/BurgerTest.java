@@ -30,7 +30,7 @@ public class BurgerTest {
         burger.addIngredient(ingredient);
         int expectedAmountOfIngredients = 1;
         int actualAmountOfIngredients = burger.ingredients.size();
-        assertEquals(expectedAmountOfIngredients, actualAmountOfIngredients);
+        assertEquals("Ингредиент не добавлен", expectedAmountOfIngredients, actualAmountOfIngredients);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class BurgerTest {
         burger.removeIngredient(0);
         int expectedAmountOfIngredients = 0;
         int actualAmountOfIngredients = burger.ingredients.size();
-        assertEquals(expectedAmountOfIngredients, actualAmountOfIngredients);
+        assertEquals("Ингредиент не удалён", expectedAmountOfIngredients, actualAmountOfIngredients);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class BurgerTest {
         burger.moveIngredient(0,1);
         int expectedIndexOfIngredient = 1;
         int actualIndexOfIngredient = burger.ingredients.indexOf(ingredient1);
-        assertEquals(expectedIndexOfIngredient, actualIndexOfIngredient);
+        assertEquals("Индексы ингредиентов не изменились", expectedIndexOfIngredient, actualIndexOfIngredient);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class BurgerTest {
         burger.addIngredient(ingredient);
         float expectedBurgerPrice = 300f;
         float actualBurgerPrice = burger.getPrice();
-        assertEquals(expectedBurgerPrice, actualBurgerPrice, 0.0f);
+        assertEquals("Цена бургера не соответствует ожидаемой", expectedBurgerPrice, actualBurgerPrice, 0.0f);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class BurgerTest {
                 "(==== Флюоресцентная булка R2-D3 ====)\r\n" +
                 "\r\nPrice: 300,000000\r\n";
         String actualReceipt = burger.getReceipt();
-        assertEquals(expectedReceipt, actualReceipt);
+        assertEquals("Полученный рецепт не соответствует ожидаемому", expectedReceipt, actualReceipt);
     }
 
 }

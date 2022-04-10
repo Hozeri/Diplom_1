@@ -29,7 +29,7 @@ public class IngredientParameterizedTest {
     @Test
     public void getTypeSauceAndFillingReturnsIngredientTypeTest() {
         IngredientType actualIngredientType = ingredient.getType();
-        assertEquals(ingredientType, actualIngredientType);
+        assertEquals("Тип ингредиента не соответствует ожидаемому", ingredientType, actualIngredientType);
     }
 
 }

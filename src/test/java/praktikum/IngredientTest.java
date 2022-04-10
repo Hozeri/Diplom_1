@@ -19,14 +19,14 @@ public class IngredientTest {
     public void getPriceFloatPriceReturnsPriceOfTheIngredientTest() {
         float expectedPrice = 3000f;
         float actualPrice = ingredient.getPrice();
-        assertEquals(expectedPrice, actualPrice, 0.0f);
+        assertEquals("Стоимость ингредиента не соответствует ожидаемой", expectedPrice, actualPrice, 0.0f);
     }
 
     @Test
     public void getNameStringNameReturnsNameOfTheIngredientTest() {
         String expectedName = "Говяжий метеорит (отбивная)";
         String actualName = ingredient.getName();
-        assertEquals(expectedName, actualName);
+        assertEquals("Имя ингредиента не соответствует ожидаемому", expectedName, actualName);
     }
 
 }
